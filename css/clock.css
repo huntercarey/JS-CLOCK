@@ -1,3 +1,14 @@
 body {
     background-color: black;
+    text-align: center;
+}
+
+#clockDisplay {
+    display: inline-block;
+    font-family: monospace;
+    font-size: 40pt;
+    color: white;
+    vertical-align: middle;
+    padding: 10px;
+    border: 5px groove;
 }
