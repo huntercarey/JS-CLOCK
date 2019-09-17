@@ -4,11 +4,24 @@ body {
 }
 
 #clockDisplay {
+    position: absolute; /*We want to position this exactly*/
+    top: 50%; /*Move element down 50% of the height of the parent*/
+    left: 50%;/*Move element right 50% of the height of the parent*/
     display: inline-block;
     font-family: monospace;
     font-size: 40pt;
-    color: white;
-    vertical-align: middle;
+    color:goldenrod;
     padding: 10px;
-    border: 5px groove;
+    border: 5px ridge goldenrod;
+    border-radius: 0 10% 0 10%;
+    transform: translateX(-50%) translateY(-50%); /*Move the element 50% of its width to the left and 50% of its height up.*/
+   
+
+}
+
+#clockDisplay:hover {
+    color: black;
+    transition: 10s;
+    border: solid;
+
 }

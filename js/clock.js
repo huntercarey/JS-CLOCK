@@ -46,3 +46,7 @@ function showTime() {
 }
 
 showTime();
+
+function showDate() {
+    
+}
