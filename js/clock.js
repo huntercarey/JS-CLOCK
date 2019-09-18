@@ -38,8 +38,6 @@ function showTime() {
     //String to store the current time
     var time = `${hour}:${minute}:${seconds} ${period}`;
 
-    console.log(time);
-
     document.getElementById('clockDisplay').innerText = time;
 
     setTimeout(showTime, 1000); //Schedule the showtime function to be called after 1000 ms (1 second)
@@ -48,5 +46,88 @@ function showTime() {
 showTime();
 
 function showDate() {
-    
+    var date =  new Date();
+
+    var dayOfWeek = date.getDay(); //Returns a value between 0 and 6 that corresponds to the current day of the week.
+
+    switch (dayOfWeek) {
+        case 0:
+            dayOfWeek = 'Sunday';
+            break;
+        case 1:
+            dayOfWeek = 'Monday';
+            break;
+        case 2:
+            dayOfWeek = 'Tuesday';
+            break;
+        case 3:
+            dayOfWeek = 'Wednesday';
+            break;
+        case 4:
+            dayOfWeek = 'Thursday';
+            break;
+        case 5:
+            dayOfWeek = 'Friday';
+            break;
+        case 6:
+            dayOfWeek = 'Saturday';
+            break;
+        default:
+            dayOfWeek = 'error';
+    }
+
+    var month = date.getMonth();
+
+    switch (month) {
+        case 0:
+            month = 'January';
+            break;
+        case 1:
+            month = 'February';
+            break;
+        case 2:
+            month = 'March';
+            break;
+        case 3:
+            month = 'April';
+            break;
+        case 4:
+            month = 'May';
+        case 5:
+            month = 'June';
+            break;
+        case 6:
+            month = 'July';
+            break;
+        case 7:
+            month = 'August';
+            break;
+        case 8:
+            month = 'September';
+            break;
+        case 9:
+            month = 'October';
+            break;
+        case 10:
+            month = 'November';
+            break;
+        case 11:
+            month = 'December';
+            break;
+        default:
+            month = 'error';
+    }
+
+    var dayOfMonth = date.getDate(); //Returns the current day in the month (1-31)
+
+    var todaysDate = `${dayOfWeek}, ${month} ${dayOfMonth}`;
+
+    document.getElementById('dateDisplay').innerText = todaysDate;
+
+    console.log(todaysDate);
+
+    setTimeout(showDate, 8.64e+7);
+
 }
+
+showDate();
